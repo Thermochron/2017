@@ -76,7 +76,7 @@ Schedule
    :caption: Course information
 
    general-info/course-details
-   general-info/software
+   general-info/software-installation
    general-info/licensing
 
 .. toctree::
