@@ -32,7 +32,7 @@ Instructors
 - `Christoph Glotzbach <http://www.uni-tuebingen.de/fakultaeten/mathematisch-naturwissenschaftliche-fakultaet/fachbereiche/geowissenschaften/arbeitsgruppen/mineralogie-geodynamik/forschungsbereich/geologie-geodynamik/people/christoph-glotzbach.html>`__, Department of Geosciences, University of Tübingen, Germany
 - `Clare Warren <http://www.open.ac.uk/people/cw6522>`__, School of Environment, Earth & Ecosystem Sciences, The Open University, U.K.
 
-*with contributions by* `David Whipp <http://www.helsinki.fi/geo/staff/whipp/>`__ *and* `Ilmo Kukkonen <https://tuhat.helsinki.fi/portal/en/persons/ilmo-kukkonen(2872f41a-6d51-45c2-9cef-66d55bf5f679).html>`__, *University of Helsinki*
+with contributions by `David Whipp <http://www.helsinki.fi/geo/staff/whipp/>`__ and `Ilmo Kukkonen <https://tuhat.helsinki.fi/portal/en/persons/ilmo-kukkonen(2872f41a-6d51-45c2-9cef-66d55bf5f679).html>`__, University of Helsinki
 
 Course fee
 ----------
