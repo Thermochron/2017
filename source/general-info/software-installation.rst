@@ -13,11 +13,14 @@ Installing VirtualBox
 
 Installing the Linux image
 --------------------------
+You can download a copy of the virtual machine image from `https://filesender.funet.fi/?vid=3335246a-97c3-afc8-abd1-00005db02c43 <https://filesender.funet.fi/?vid=3335246a-97c3-afc8-abd1-00005db02c43>`__.
+This image can be opened using VirtualBox and will allow you to run a Linux machine on your own personal computer.
+All of the course software is available in this environment.
 
-The image for download will be made available shortly.
+In case you need them, the username and passwords for the virtual machine images are below:
 
-Username: osboxes
-Password: Thermochron2017!
+- Username: osboxes
+- Password: Thermochron2017!
 
 Software used in the course
 ---------------------------
