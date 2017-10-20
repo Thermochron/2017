@@ -15,3 +15,15 @@ Installing the Linux image
 --------------------------
 
 The image for download will be made available shortly.
+
+Username: osboxes
+Password: Thermochron2017!
+
+Software used in the course
+---------------------------
+If you use the Linux image above, you do not need to download and install any of the software below, as it is already installed and ready for use on the virtual machine.
+If you would like to install the course software on your personal computer, for instance, you'll find a list of software and download links below.
+
+- `HeFTy (version 1.7.4) <ftp://ftp.ctlab.geo.utexas.edu/Ketcham/ft/HeFTy/>`__ (Windows)
+- `Flojt <http://hebergement.u-psud.fr/flojt/>`__ (Windows)
+- `Pecube <https://github.com/HUGG/Pecube-HUGG>`__ (any operating system; needs compilers)
