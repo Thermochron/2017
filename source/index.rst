@@ -82,3 +82,15 @@ Schedule
 .. toctree::
    :maxdepth: 2
    :caption: Day 1
+
+   lessons/Day-1/overview
+   lessons/Day-1/lecture-materials
+   lessons/Day-1/lecture-videos
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Day 2
+
+   lessons/Day-2/overview
+   lessons/Day-2/lecture-materials
+   lessons/Day-2/lecture-videos
