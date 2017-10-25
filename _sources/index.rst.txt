@@ -94,3 +94,11 @@ Schedule
    lessons/Day-2/overview
    lessons/Day-2/lecture-materials
    lessons/Day-2/lecture-videos
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Day 3
+
+   lessons/Day-3/overview
+   lessons/Day-3/lecture-materials
+   lessons/Day-3/lecture-videos
