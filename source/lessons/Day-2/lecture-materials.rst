@@ -22,7 +22,7 @@ Lecture materials
 
 |
 
-.. admonition:: Activity supporting materials
+.. admonition:: Supporting materials
 
     - `Ar/Ar activity sheet (Word) <../../_static/docs/Day-2/ArAr-activity-sheet.docx>`__
     - `Ar/Ar activity sheet (PDF) <../../_static/docs/Day-2/ArAr-activity-sheet.pdf>`__
