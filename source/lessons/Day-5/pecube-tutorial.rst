@@ -1,8 +1,42 @@
 Introduction to Pecube
 ======================  
-On day 3 of the course `Christoph Glotzbach <http://www.uni-tuebingen.de/fakultaeten/mathematisch-naturwissenschaftliche-fakultaet/fachbereiche/geowissenschaften/arbeitsgruppen/mineralogie-geodynamik/forschungsbereich/geologie-geodynamik/people/christoph-glotzbach.html>`__ from the `University of Tübingen <https://www.uni-tuebingen.de/>`__ introduced us to fission-track dating.
-We were also able to pick fission tracks online and explore track length distributions using the software HeFTy.
-Below you will find links to the lecture materials and videos of the lectures.
 
-1. :doc:`Lecture materials <lecture-materials>`
-2. :doc:`Lecture videos <lecture-videos>`
+Outline
+-------
+
+- General overview of Pecube and how it differs from the other models we've used
+  
+  - 3D heat transfer model (conduction, advection, material properties, topography, kinematics, etc.)
+  - Age prediction algorithms (comparison to Dodson)
+  - Differences from DiffArg (Crystal scale model of Ar diffusion with a specified thermal history)
+  - Differences from HeFTy (Modeling ages data again, focussed only on the effect of the cooling history - no connection to physical process)
+  - Aims of software
+  - Advantages and disadvantages
+
+- Using Pecube
+
+  - Overview of the input file (quick, simple pre-configured example)
+  - Running Pecube (test, run)
+  - Post processing output
+  - Visualizing output in ParaView
+
+- Comparison with data
+
+  - Thermal field (general structure, heat flow)
+  - Age comparison (goodness-of-fit, 
+
+- Designing your own models
+
+  - Preparing a model, what do we need? (Ages, topography, material properties)
+  - General design principles (spatial extent, model thickness, boundary conditions, etc.)
+  - Optimization
+
+- Pecube models of various scenarios
+
+  - Changes in relief
+  - Active faults
+
+- Advanced topics
+
+  - Data inversion using Pecube
+  - 
