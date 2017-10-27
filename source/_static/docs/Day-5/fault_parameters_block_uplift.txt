@@ -9,7 +9,7 @@ $ number of faults active at any time during the run
 $ two points (in longitude-latitude) defining the y axis of the
 $ coordinate system used to define the faults
 $ the x-axis is to the right of the y-axis
-0.0 0.0. 1.0 1.0
+0.0 0.0 1.0 1.0
 
 $ fault model:
 $ 1 = Original Pecube fault model
