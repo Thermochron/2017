@@ -19,7 +19,7 @@
     </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Lecture materials &mdash; Thermochronology course 2017 documentation</title>
+  <title>Introduction to Pecube &mdash; Thermochronology course 2017 documentation</title>
   
 
   
@@ -49,8 +49,6 @@
               href="../../genindex.html"/>
         <link rel="search" title="Search" href="../../search.html"/>
     <link rel="top" title="Thermochronology course 2017 documentation" href="../../index.html"/>
-        <link rel="next" title="Lesson videos" href="lecture-videos.html"/>
-        <link rel="prev" title="Overview" href="overview.html"/>
     <link href="../../_static/style.css" rel="stylesheet" type="text/css">
 
 
@@ -115,10 +113,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../../general-info/licensing.html">Content licenses</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Day 1</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Lecture materials</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lecture-videos.html">Lesson videos</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Day-1/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Day-1/lecture-materials.html">Lecture materials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Day-1/lecture-videos.html">Lesson videos</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Day 2</span></p>
 <ul>
@@ -140,7 +138,7 @@
 </ul>
 <p class="caption"><span class="caption-text">Day 5</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../Day-5/pecube-exercise.html">Pecube exercise</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pecube-exercise.html">Pecube exercise</a></li>
 </ul>
 
             
@@ -185,13 +183,13 @@
     
       <li><a href="../../index.html">Docs</a> &raquo;</li>
         
-      <li>Lecture materials</li>
+      <li>Introduction to Pecube</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/lessons/Day-1/lecture-materials.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/lessons/Day-5/pecube-tutorial.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -204,44 +202,79 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="lecture-materials">
-<h1>Lecture materials<a class="headerlink" href="#lecture-materials" title="Permalink to this headline">¶</a></h1>
-<div class="admonition-lesson-1-0-practical-course-information admonition">
-<p class="first admonition-title">Lesson 1.0 - Practical course information</p>
-<ul class="last simple">
-<li><a class="reference external" href="../../_static/docs/Day-1/Low-T-Lesson-1.0.key">Lecture slides (Keynote)</a></li>
-<li><a class="reference external" href="../../_static/docs/Day-1/Low-T-Lesson-1.0.pdf">Lecture slides (PDF)</a></li>
+  <div class="section" id="introduction-to-pecube">
+<h1>Introduction to Pecube<a class="headerlink" href="#introduction-to-pecube" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="general-overview">
+<h2>General overview<a class="headerlink" href="#general-overview" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="#pecube" id="id1">[Pecube]</a> is a numerical modelling program used to simulate heat transfer in the lithosphere and to predict thermochronometer ages.
+Pecube uses the finite element method to calculate time-dependent temperatures in 3D including the effects of heat conduction, advection, and production.
+What is somewhat unique with Pecube is that the surface topography can evolve freely with time and there is a fairly flexible kinematic model built in, which allows users to define fault geometries and slip rates within their model domain.
+Pecube can be used for standard forward modelling of a given region or set of ages, or to invert thermochronometer data using the Neighbourhood Algorithm <a class="reference internal" href="#na" id="id2">[NA]</a>.</p>
+<p>The general time-dependent heat transfer equation solved in Pecube is shown below</p>
+<div class="math">
+\[\rho c \left( \frac{\partial T}{\partial t} + V \cdot \nabla T \right) = \nabla \cdot k \nabla T + \rho H\]</div>
+<p>where <span class="math">\(\rho\)</span> is density, <span class="math">\(c\)</span> is heat capacity, <span class="math">\(T\)</span> is temperature, <span class="math">\(t\)</span> is time, <span class="math">\(V\)</span> is the advection velocity, <span class="math">\(k\)</span> is thermal conductivity, and <span class="math">\(H\)</span> is the heat production.
+The various terms can be broken out based on their role in heat transfer as follows.</p>
+<div class="math">
+\[\rho c \underbrace{(\frac{\partial T}{\partial t}}_\text{Time dependence} + \underbrace{V \cdot \nabla T}_\text{Advection} ) = \underbrace{\nabla \cdot k \nabla T}_\text{Conduction} + \underbrace{\rho H}_\text{Production}\]</div>
+<p>We won&#8217;t go into any detail for our course, but here we can at least see the equation and its components.</p>
+</div>
+<div class="section" id="outline">
+<h2>Outline<a class="headerlink" href="#outline" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>General overview of Pecube and how it differs from the other models we&#8217;ve used<ul>
+<li>3D heat transfer model (conduction, advection, material properties, topography, kinematics, etc.)</li>
+<li>Age prediction algorithms (comparison to Dodson)</li>
+<li>Differences from DiffArg (Crystal scale model of Ar diffusion with a specified thermal history)</li>
+<li>Differences from HeFTy (Modeling ages data again, focussed only on the effect of the cooling history - no connection to physical process)</li>
+<li>Aims of software</li>
+<li>Advantages and disadvantages</li>
 </ul>
-</div>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<div class="admonition-lesson-1-1-basics-of-thermochronology admonition">
-<p class="first admonition-title">Lesson 1.1 - Basics of thermochronology</p>
-<ul class="last simple">
-<li><a class="reference external" href="../../_static/docs/Day-1/Low-T-Lesson-1.1.key">Lecture slides (Keynote)</a></li>
-<li><a class="reference external" href="../../_static/docs/Day-1/Low-T-Lesson-1.1.pdf">Lecture slides (PDF)</a></li>
+</li>
+<li>Using Pecube<ul>
+<li>Overview of the input file (quick, simple pre-configured example)</li>
+<li>Running Pecube (test, run)</li>
+<li>Post processing output</li>
+<li>Visualizing output in ParaView</li>
 </ul>
-</div>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<div class="admonition-lesson-1-2-applications-of-thermochronology admonition">
-<p class="first admonition-title">Lesson 1.2 - Applications of thermochronology</p>
-<ul class="last simple">
-<li><a class="reference external" href="../../_static/docs/Day-1/Low-T-Lesson-1.2.key">Lecture slides (Keynote)</a></li>
-<li><a class="reference external" href="../../_static/docs/Day-1/Low-T-Lesson-1.2.pdf">Lecture slides (PDF)</a></li>
+</li>
+<li>Comparison with data<ul>
+<li>Thermal field (general structure, heat flow)</li>
+<li>Age comparison (goodness-of-fit,</li>
 </ul>
-</div>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<div class="admonition-lesson-1-3-crustal-thermal-processes-thermochronology-in-fennoscandia admonition">
-<p class="first admonition-title">Lesson 1.3 - Crustal thermal processes, thermochronology in Fennoscandia</p>
-<ul class="last simple">
-<li><a class="reference external" href="../../_static/docs/Day-1/Low-T-Lesson-1.3.pptx">Lecture slides (Powerpoint)</a></li>
-<li><a class="reference external" href="../../_static/docs/Day-1/Low-T-Lesson-1.3.pdf">Lecture slides (PDF)</a></li>
+</li>
+<li>Designing your own models<ul>
+<li>Preparing a model, what do we need? (Ages, topography, material properties)</li>
+<li>General design principles (spatial extent, model thickness, boundary conditions, etc.)</li>
+<li>Optimization</li>
 </ul>
+</li>
+<li>Pecube models of various scenarios<ul>
+<li>Changes in relief</li>
+<li>Active faults</li>
+</ul>
+</li>
+<li>Advanced topics<ul>
+<li>Data inversion using Pecube</li>
+</ul>
+</li>
+</ul>
+<table class="docutils citation" frame="void" id="pecube" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[Pecube]</a></td><td><p class="first">Braun, J., 2003. Pecube: A new finite-element code to solve the 3D heat transport equation including the effects of a time-varying, finite amplitude surface topography. <em>Computers &amp; Geosciences</em>, 29(6), pp.787-794, <a class="reference external" href="https://doi.org/10.1016/S0098-3004(03)00052-9">https://doi.org/10.1016/S0098-3004(03)00052-9</a>.</p>
+<p class="last">Braun, J., Van Der Beek, P., Valla, P., Robert, X., Herman, F., Glotzbach, C., Pedersen, V., Perry, C., Simon-Labric, T. and Prigent, C., 2012. Quantifying rates of landscape evolution and tectonic processes by thermochronology and numerical modeling of crustal heat transport using PECUBE. <em>Tectonophysics</em>, 524, pp.1-28, <a class="reference external" href="https://doi.org/10.1016/j.tecto.2011.12.035">https://doi.org/10.1016/j.tecto.2011.12.035</a>.</p>
+</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="na" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[NA]</a></td><td><p class="first">Sambridge, M., 1999. Geophysical inversion with a neighbourhood algorithm—I. Searching a parameter space. <em>Geophysical Journal International</em>, 138(2), pp.479-794, <a class="reference external" href="https://dx.doi.org/10.1046/j.1365-246X.1999.00876.x">https://dx.doi.org/10.1046/j.1365-246X.1999.00876.x</a>.</p>
+<p class="last">Sambridge, M., 1999. Geophysical inversion with a neighbourhood algorithm—II. Appraising the ensemble. <em>Geophysical Journal International</em>, 138(3), pp.727-746, <a class="reference external" href="https://dx.doi.org/10.1046/j.1365-246x.1999.00900.x">https://dx.doi.org/10.1046/j.1365-246x.1999.00900.x</a>.</p>
+</td></tr>
+</tbody>
+</table>
 </div>
 </div>
 
@@ -252,15 +285,6 @@
            </div>
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="lecture-videos.html" class="btn btn-neutral float-right" title="Lesson videos" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="overview.html" class="btn btn-neutral" title="Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>
